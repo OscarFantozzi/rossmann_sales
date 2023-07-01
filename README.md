@@ -148,5 +148,55 @@ A partir daí foram treinados alguns modelos quais:
  * Linear Regression Regularized Model - Lasso
  * Random Forest Regressor
  * XGBoost Regressor
+
+### Erros
+
+Para avaliar a performance do modelo foram usados como métricas de avaliações os seguintes errros:
+
+* MAE ( Mean Absolute Error )
+O MAE é bastante usado para avaliar modelos de regressão. Ele mede a diferença entre os valores previstos pelo modelo substraído pelo valor real para cada linha da feature, em seguida somam-se os valores absolutos ( desconsiderando assim quando o modelo erra tanto para mais como para menos ) e dividi-se pela quantidade de dados contidos na feature, calculando-se assim a média.
+
+A seguir a fórmula do MAE:
+
+MAE = (1/n) * Σ |valor real - valor previsto|
+
+Quanto menor o MAE, mais o modelo está "acertando" as previsões.
+
+* MAPE ( Mean Absolute Percentage Error )
+O MAPE é obtido calculando a diferença percentual entre o valor previsto e o real e em seguida é cálculada a média das diferenças.
+
+Exemplificando:
+
+Supondo que temos uma linha de um dataset no qual:
+
+  Valor real : 15
+  Valor previsto : 12
+
+  Erro Absoluto = |15 - 12| = 3 ( Diferença entre o valor real e previsto )
+
+  Erro Absoluto % = ( Erro Absoluto / Valor Real ) * 100 ou seja ( 3 / 15 ) * 100 = 20 %
+
+  Agora este processo é repetido para cada linha da feature e a média é calculada. Este erro nos ajuda a entender o quanto o modelo erra percentualmente, por exemplo se esse valor for 10% podemos interpretar que o modelo erra as previsões 10% em relação aos valores reais.
+
+* RMSE (Root Mean Square Error)
+
+o RMSE é uma métrica que mede a diferença entre os valores reais e os previstos, porém dando mais peso aos erros maiores. Para entender melhor vamos entender como calcular o RMSE:
+
+1 - Calcula-se a diferença entre o valor real e o valor calculado;
+2 - As diferenças são elevadas ao quadrado;
+3 - Calcula-se a média desse valores quadrados;
+4 - Tira-se a raíz quadrada dessa média.
+
+Exemplificando pela fórmula onde:
+
+RMSE = √(SE / n) 
+
+Onde:
+
+SE = ( valor real - valor previsto ) ^ 2 
+
+n = número de observações, ou as linhas da feature.
+
+
   
 
