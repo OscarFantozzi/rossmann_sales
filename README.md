@@ -198,5 +198,9 @@ SE = ( valor real - valor previsto ) ^ 2
 n = número de observações, ou as linhas da feature.
 
 
+## Cross Validation
+
+Geralmente quando treinamos um modelo, dividimos o dataset em duas partes: uma para treino e a outra para teste, a ideia é ver o comportamento do modelo para dados não visto, caso contrário o modelo decoraria os dados e treino e estaria overfitado. De maneira simplificada, a ideia do cross validation é dividir o conjunto de dados em partes menores ( folds ) e ir treinando, testando e avaliando esses resultados e no fim fazer a média dessas avaliações para ter um resultado mais justo do modelo. Por exemplo posso dividir meu dataset em 5 partes, e para cada parte eu treino e testo o modelo e guardo o resultado deste teste, no fim faço a média destes 5 resultados. Isto evita que tenhamos uma avaliação enganosa do modelo, pois podemos ter usado uma parte com um comportamente bem específico para treinar o modelo e ele não generalizar bem novos dados.
+
   
 
