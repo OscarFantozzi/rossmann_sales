@@ -2,7 +2,8 @@
 ![alt text]( https://github.com/OscarFantozzi/rossmann_sales/blob/main/img/rossmann.jpg)
 
 ## Business Problem
-Rossmann é uma grande cadeia de farmácias que atua em mais de 7 países europeus com mais de 3000 lojas. As vendas são influenciadas por vários fatores como: distância do competidor, feriados escolares e estaduais, localidade, tipo de loja etc.Com base nos dados históricos de vendas das lojas o CFO pretende fazer uma previsão de venda para as próximas 6 semanas.Para solucionar o problema, vou tratar os dados e treinar um modelo de ML ( Machine Learning ) que consiga fazer uma previsão para as próximas 6 semanas com base no número da loja que for passado pra ele.
+Rossmann é uma grande cadeia de farmácias que atua em mais de 7 países europeus com mais de 3000 lojas. As vendas são influenciadas por vários fatores como: distância do competidor, feriados escolares e estaduais, localidade, tipo de loja etc.
+Com base nos dados históricos de vendas das lojas o CFO pretende fazer uma previsão de venda para as próximas 6 semanas.Para solucionar o problema, vou tratar os dados e treinar um modelo de ML ( Machine Learning ) que consiga fazer uma previsão para as próximas 6 semanas com base no número da loja que for passado pra ele.
 
 ## Origem dos dados:
 Para este estudo de caso, os dados foram retirados do site Kaggle. O Kaggle é um renomado site onde várias empresas promovem competições disponibilizando seus dados de maneira pública e premiando as equipes que trouxerem as melhores soluções.Abaixo disponibizo o link de onde os dados foram retirados, lembrando que os mesmos também se encontram na pasta "data" do github.
@@ -200,7 +201,9 @@ n = número de observações, ou as linhas da feature.
 
 ## Cross Validation
 
-Geralmente quando treinamos um modelo, dividimos o dataset em duas partes: uma para treino e a outra para teste, a ideia é ver o comportamento do modelo para dados não visto, caso contrário o modelo decoraria os dados e treino e estaria overfitado. De maneira simplificada, a ideia do cross validation é dividir o conjunto de dados em partes menores ( folds ) e ir treinando, testando e avaliando esses resultados e no fim fazer a média dessas avaliações para ter um resultado mais justo do modelo. Por exemplo posso dividir meu dataset em 5 partes, e para cada parte eu treino e testo o modelo e guardo o resultado deste teste, no fim faço a média destes 5 resultados. Isto evita que tenhamos uma avaliação enganosa do modelo, pois podemos ter usado uma parte com um comportamente bem específico para treinar o modelo e ele não generalizar bem novos dados.
+Geralmente quando treinamos um modelo, dividimos o dataset em duas partes: uma para treino e a outra para teste, a ideia é ver o comportamento do modelo para dados não visto, caso contrário o modelo decoraria os dados e treino e estaria overfitado. De maneira simplificada, a ideia do cross validation é dividir o conjunto de dados em partes menores ( folds ) e ir treinando, testando e avaliando esses resultados e no fim fazer a média dessas avaliações para ter um resultado mais justo do modelo. 
+
+Por exemplo posso dividir meu dataset em 5 partes, e para cada parte eu treino e testo o modelo e guardo o resultado deste teste, no fim faço a média destes 5 resultados. Isto evita que tenhamos uma avaliação enganosa do modelo, pois podemos ter usado uma parte com um comportamente bem específico para treinar o modelo e ele não generalizar bem novos dados.
 
   
 
