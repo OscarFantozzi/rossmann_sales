@@ -143,10 +143,10 @@ Nesta etapa, vou escolher as features que serão usadas para treinar o modelo. F
 Após selecionar as features, divido os dados em teste e treino. Considerei os dados de treino todo o dataset menos as últimas 06 semanas, que foram separadas e armazenadas como dados de test.
 
 A partir daí foram treinados alguns modelos quais:
-- * Average Model
-- * Linear Regression Model
-- * Linear Regression Regularized Model - Lasso
-- * Random Forest Regressor
-- * XGBoost Regressor
+ * Average Model
+ * Linear Regression Model
+ * Linear Regression Regularized Model - Lasso
+ * Random Forest Regressor
+ * XGBoost Regressor
   
 
