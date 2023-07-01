@@ -3,6 +3,7 @@
 
 ## Business Problem
 Rossmann é uma grande cadeia de farmácias que atua em mais de 7 países europeus com mais de 3000 lojas. As vendas são influenciadas por vários fatores como: distância do competidor, feriados escolares e estaduais, localidade, tipo de loja etc.
+
 Com base nos dados históricos de vendas das lojas o CFO pretende fazer uma previsão de venda para as próximas 6 semanas.Para solucionar o problema, vou tratar os dados e treinar um modelo de ML ( Machine Learning ) que consiga fazer uma previsão para as próximas 6 semanas com base no número da loja que for passado pra ele.
 
 ## Origem dos dados:
