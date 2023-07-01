@@ -153,7 +153,7 @@ A partir daí foram treinados alguns modelos quais:
 
 Para avaliar a performance do modelo foram usados como métricas de avaliações os seguintes errros:
 
-* MAE ( Mean Absolute Error )
+### MAE ( Mean Absolute Error )
 O MAE é bastante usado para avaliar modelos de regressão. Ele mede a diferença entre os valores previstos pelo modelo substraído pelo valor real para cada linha da feature, em seguida somam-se os valores absolutos ( desconsiderando assim quando o modelo erra tanto para mais como para menos ) e dividi-se pela quantidade de dados contidos na feature, calculando-se assim a média.
 
 A seguir a fórmula do MAE:
@@ -162,7 +162,7 @@ MAE = (1/n) * Σ |valor real - valor previsto|
 
 Quanto menor o MAE, mais o modelo está "acertando" as previsões.
 
-* MAPE ( Mean Absolute Percentage Error )
+### MAPE ( Mean Absolute Percentage Error )
 O MAPE é obtido calculando a diferença percentual entre o valor previsto e o real e em seguida é cálculada a média das diferenças.
 
 Exemplificando:
@@ -178,7 +178,7 @@ Supondo que temos uma linha de um dataset no qual:
 
   Agora este processo é repetido para cada linha da feature e a média é calculada. Este erro nos ajuda a entender o quanto o modelo erra percentualmente, por exemplo se esse valor for 10% podemos interpretar que o modelo erra as previsões 10% em relação aos valores reais.
 
-* RMSE (Root Mean Square Error)
+### RMSE (Root Mean Square Error)
 
 o RMSE é uma métrica que mede a diferença entre os valores reais e os previstos, porém dando mais peso aos erros maiores. Para entender melhor vamos entender como calcular o RMSE:
 
