@@ -101,7 +101,7 @@ Na análise Bivariada, como o próprio nome sugere, meu interesse foi ver se exi
 Como análisado a hipótese é falsa, ou seja lojas com sortimento "básico" vendem mais.
 ![alt text]( https://github.com/OscarFantozzi/rossmann_sales/blob/main/img/analise_bivariada.jpg)
 
-## Análise Multivariada
+### Análise Multivariada
 
 Na análise multivariada, foi aplicada um método de correlação de Pearson para verificar se existiam correlações entre as variáveis numéricas. Para verificar a correlação entre as variáveis categóricas ( features que contém texto ) foi usado o V de Cramer ( mais detalhes no jupyter noteboook )
 
@@ -136,6 +136,6 @@ Para o rescaling usei o método RobustScaler que funciona bem para features que 
 
 ## ETAPA 6: Feauture Selection
 
-Nesta etapa, vou escolher as features que serão usadas para treinar o modelo. Foi usado um algoritmo chamado Boruta para escolher as features mais importantes. A sugestão do Boruta se dá passando um modelo de Machine Learning como parâmetro. Vale ressaltar que o Boruta apenas dá uma sugestão, cabe ao analistar validar ou não a sugestão. No meu caso a escolha das features foi implementada com algumas features que foram consideradas importantes na *Etapa 4 Análise Exploratória de Dados*.
+Nesta etapa, vou escolher as features que serão usadas para treinar o modelo. Foi usado um algoritmo chamado Boruta para escolher as features mais importantes. A sugestão do Boruta se dá passando um modelo de Machine Learning como parâmetro. Vale ressaltar que o Boruta apenas dá uma sugestão, cabe ao analistar validar ou não a sugestão. No meu caso na escolha das features do Boruta foram adicionadas outras feutures consideradas também relevantes durante a "Etapa 4: Análise Exploratória de Dados".
 
 
