@@ -136,6 +136,17 @@ Para o rescaling usei o método RobustScaler que funciona bem para features que 
 
 ## ETAPA 6: Feauture Selection
 
-Nesta etapa, vou escolher as features que serão usadas para treinar o modelo. Foi usado um algoritmo chamado Boruta para escolher as features mais importantes. A sugestão do Boruta se dá passando um modelo de Machine Learning como parâmetro. Vale ressaltar que o Boruta apenas dá uma sugestão, cabe ao analistar validar ou não a sugestão. No meu caso na escolha das features do Boruta foram adicionadas outras feutures consideradas também relevantes durante a "Etapa 4: Análise Exploratória de Dados".
+Nesta etapa, vou escolher as features que serão usadas para treinar o modelo. Foi usado um algoritmo chamado Boruta para escolher as features mais importantes. A sugestão do Boruta se dá passando um modelo de Machine Learning como parâmetro. Vale ressaltar que o Boruta apenas dá uma sugestão, cabe ao analista validar ou não a sugestão. No meu caso foram adicionadas outras features também consideradas importantes por mim durante a etapa *ETAPA 4: Análise Exploratória de Dados*.
 
+## ETAPA 7: Machine Learning Modelling
+
+Após selecionar as features, divido os dados em teste e treino. Considerei os dados de treino todo o dataset menos as últimas 06 semanas, que foram separadas e armazenadas como dados de test.
+
+A partir daí foram treinados alguns modelos quais:
+- * Average Model
+- * Linear Regression Model
+- * Linear Regression Regularized Model - Lasso
+- * Random Forest Regressor
+- * XGBoost Regressor
+  
 
