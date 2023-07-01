@@ -124,13 +124,18 @@ Isso mudará a escala da minha feature.
 ### Rescaling
 
 O rescaling é a reescala feita para features que não tem distribuições normais.É feita a reescala de para o intervalo entre 0 e 1.
+Para o rescaling usei o método RobustScaler que funciona bem para features que contém outliers, e o MinMaxScaler que funciona bem para features sem outliers.
+
 
 ### Transformação
 
-- *Encondig*: Conversão de fetures categóricas para features numéricas.
+- *Encondig*: Conversão de fetures categóricas para features numéricas. Para encoding utilizei o método do pandas pd.getdummies(). O método getdummies é usada para feturues que tenham poucos valores únicos, pois ele pega o valor da linha, transforma em uma coluna e marca 0 para falso e 1 para verdadeiro de acordo se aquele dado existe ou não naquela linha, por tal motivo é aconselhado o uso para features com até no máximo 5 valores únicos dentro da coluna, isso para evitar a criação de inúmeras colunas dentro do dataset.
+   
 - *Transformação de Natureza*": Usadas em variáveis cíclicas que se repetem. Por exemplo o ano tem um comportamento cíclico, pois a cada 12 meses tenho novamente 1 ano.
   
 
+## ETAPA 6: Feauture Selection
 
+Nesta etapa, vou escolher as features que serão usadas para treinar o modelo. Foi usado um algoritmo chamado Boruta para escolher as features mais importantes. A sugestão do Boruta se dá passando um modelo de Machine Learning como parâmetro. Vale ressaltar que o Boruta apenas dá uma sugestão, cabe ao analistar validar ou não a sugestão. No meu caso a escolha das features foi implementada com algumas features que foram consideradas importantes na *Etapa 4 Análise Exploratória de Dados*.
 
 
