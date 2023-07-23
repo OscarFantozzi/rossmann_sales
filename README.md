@@ -206,5 +206,33 @@ Geralmente quando treinamos um modelo, dividimos o dataset em duas partes: uma p
 
 Por exemplo posso dividir meu dataset em 5 partes, e para cada parte eu treino e testo o modelo e guardo o resultado deste teste, no fim faço a média destes 5 resultados. Isto evita que tenhamos uma avaliação enganosa do modelo, pois podemos ter usado uma parte com um comportamente bem específico para treinar o modelo e ele não generalizar bem novos dados.
 
+# 8.0 - Hyperparameters Fine Tuning
+
+Hipeparâmetros são ajustes que se fazem nos argumentos do modelo com o intuito de melhorar a performance do modelo. Neste caso foram usados parâmetros aleatórios e posteriormente escolhidos a combinação que melhor performou. Os parâmetros foram escolhidos de acordo com a documentação do XGBosstRegressor : https://docs.getml.com/1.1.0/api/getml.predictors.XGBoostRegressor.html.
+
+# 9.0 - Tradução e Interpretação do Erro
+
+No passo 09 através do erro MAE explicado anteriormente, foram traçados 02 cenários: um pessimista e um otimista. O cenário pessimista leva em consideração a previsão do modelo subtraindo o erro MAE, enquanto o cenário otimista considera a soma do valor previsto e o erro MAE.
+
+# 10  - Deploy
+
+O último passo foi colocar o modelo treinado em produção. Foi construida uma API que recebe o número da loja da qual se quer a estimativa de vendas e devolve a previsão através de um bot do telegram.A API do modelo está em uma instância do GCP ( Google Cloud Platform ).
+
+![alt text]( https://github.com/OscarFantozzi/rossmann_sales/blob/main/img/bot_telegram.jpg)
+
+Praticamente foi criada uma classe chamada Rossmann que faz o tratamento dos dados e a previsão toda vez que é recebida uma requisição. Os dados são recebidos no formato json via chamada API do scrip rossmann_telegram_api, que por sua vez faz uma chamada na API handler.py hospedada no GCLOUD que devolve os resultados do modelo via bot do telegram.
+
+# Próximos passos
+
+Como o projeto foi realizado em ciclos, há sempre melhorias para serem implementadas. Este foi somente o primeiro ciclo, onde a ideia principal foi passar rapidamente por todas as etapas e colocar o modelo em produção para que já pudesse devolver as previsões e gerar valor para o negócio. Uma vez terminado o primeiro ciclo fica mais fácil passar novamente pelas mesmas etapas com o objetivo de realizar realizar melhorias e implementar novos testes e experimentos. Algumas etapas que poderiam ser implementadas nos ciclos posteriores poderiam ser:
+
+* Trazer novos dados econômicos como a inflação do período e outros indicadores econômicos
+* Trazer novos dados sobre preferencias do consumidor
+* Trazer novos dados sobre os produtos vendidos pelas lojas
+* Retreinar o modelo com os dados dos últimos anos e avaliar sua performance.
+
+Para concluir, por mais que um modelo possa estar momentaneamente performando bem, o mesmo deve sempre ser retroalimentado com novos dados para perceber novos padrões de comportamente e suas métricas sempre acompanhadas para evitar situações de overfitting e fornecer informações erradas para os principais stakeholders do negócio.
+
+
   
 
