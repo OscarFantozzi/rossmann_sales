@@ -24,7 +24,7 @@ As etapas para resolver o problema foram as seguintes:
 * 4.0 - Análise Exploratória de Dados
 * 5.0 - Data Preparation
 * 6.0 - Feature Selection
-* 7.0 - Machine Learning Modelling
+* 7.0 - Machine Learning Modeling
 * 8.0 - Hyperparameters Fine Tuning
 * 9.0 - Tradução e Interpretação do Erro
 * 10  - Deploy
